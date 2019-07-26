@@ -20,6 +20,7 @@ namespace EdifyApp.API.Controllers
             _context = context;
         }
         // GET all values from the database
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetValues()
         {
