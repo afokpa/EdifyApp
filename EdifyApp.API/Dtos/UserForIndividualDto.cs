@@ -1,14 +1,11 @@
 using System;
-using System.Collections.Generic;
 
-namespace EdifyApp.API.Models
+namespace EdifyApp.API.Dtos
 {
-    public class User
+    public class UserForIndividualDto
     {
         public int Id { get; set; }
         public string Username { get; set; }
-        public byte[] PasswordHash { get; set; }
-        public byte[] PasswordSalt { get; set; }
         public string Department { get; set; }
         public int NumberOfDays { get; set; }
         public DateTime LeaveCommencingDate { get; set; }
