@@ -53,6 +53,7 @@ namespace EdifyApp.API.Controllers
             if (userFromRepo == null)
                 return Unauthorized();
 
+
             var claims = new[]
             {
                     new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),
@@ -75,7 +76,8 @@ namespace EdifyApp.API.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
             return Ok(new {
-                token = tokenHandler.WriteToken(token)
+                token = tokenHandler.WriteToken(token),
+                user = userFromRepo
             });
         }
     }

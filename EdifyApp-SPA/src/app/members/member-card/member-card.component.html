@@ -1,0 +1,8 @@
+<div class="card mb-4">
+  <button class="btn" [routerLink]="['/members/', user.id]">
+      <div class="card-body p-1">
+          <h6 class="card-title text-center mb-2"><i class="fa fa-user"></i> {{user.username | titlecase}}</h6>
+          <p class="card-text text-muted text-center mb-2">{{user.department}}, {{user.remainingLeaveDays}}</p>
+        </div>
+  </button> 
+</div>
