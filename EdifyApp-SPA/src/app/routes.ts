@@ -8,6 +8,8 @@ import { LeaveComponent } from './leave/leave.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { MemberListResolver } from './_resolvers/member-list.resolver';
+import { LeaveResolver } from './_resolvers/leave.resolver';
+import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 
 export const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -18,9 +20,9 @@ export const appRoutes: Routes = [
         children: [
             {path: 'members', component: MemberListComponent, resolve: {users: MemberListResolver}},
             {path: 'members/:id', component: MemberDetailComponent, resolve: {user: MemberDetailResolver}},
+            {path: 'leave', component: LeaveComponent, resolve: {user: LeaveResolver}, canDeactivate: [PreventUnsavedChanges]},
             {path: 'messages', component: MessagesComponent},
-            {path: 'lists', component: ListsComponent},
-            {path: 'leave', component: LeaveComponent}
+            {path: 'lists', component: ListsComponent}
         ]
     },
     {path: '**', redirectTo: '', pathMatch: 'full'},

@@ -10,6 +10,7 @@ namespace EdifyApp.API.Helpers
         {
             CreateMap<User, UserForListDto>();
             CreateMap<User, UserForIndividualDto>();
+            CreateMap<UserForUpdateDto, User>();
         }
     }
 }
