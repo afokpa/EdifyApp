@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<div class="container mt-0.1">
   <div class="row">
     <div class="col-sm-4">
       <div class="card-body">
@@ -15,9 +15,33 @@
             <p>{{user.leaveReason}}</p>
         </div>
         <div>
+          <strong>Number Of Days</strong>
+          <p>{{user.numberOfDays}}</p>
+      </div>
+      <div>
+        <strong>Leave Commencing Date</strong>
+        <p>{{user.leaveCommencingDate}}</p>
+    </div>
+      <div>
+        <strong>Return Date</strong>
+        <p>{{user.returnDate}}</p>
+    </div>
+        <div>
             <strong>Outstanding Duties</strong>
             <p>{{user.currentOutstandingDuties}}</p>
         </div>
+        <div>
+          <strong>Status Of Outstanding Duties</strong>
+          <p>{{user.statusOfCurrentOutstandingDuties}}</p>
+      </div>
+      <div>
+        <strong>Staff To Takeover</strong>
+        <p>{{user.takeoverEmployee}}</p>
+    </div>
+    <div>
+      <strong>Takeover Staff Reports To</strong>
+      <p>{{user.fillInEmployeeReportsTo}}</p>
+  </div>
       </div>
     </div>
     <div class="col-sm-8">

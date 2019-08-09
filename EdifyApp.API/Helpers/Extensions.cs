@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Http;
+using EdifyApp.API.Dtos;
+using EdifyApp.API.Models;
 
 namespace EdifyApp.API.Helpers
 {
@@ -10,5 +12,12 @@ namespace EdifyApp.API.Helpers
             response.Headers.Add("Access-Control-Expose-Headers", "Application-Error");
             response.Headers.Add("Access-Control-Allow-Origin", "*");
         }
+
+        // public static int CalculateNewRemaingLeaveDays(this int theNumber)
+        // {
+        //     var theThing = new User();
+        //     int remainingLeaveDays = theThing.RemainingLeaveDays - theNumber;
+        //     return remainingLeaveDays;
+        // }
     }
 }

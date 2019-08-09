@@ -12,7 +12,7 @@
               <p>{{user.department}}</p>
           </div>
           <div>
-              <strong>Remaining leave days</strong>
+              <strong>Remaining Leave Days</strong>
               <p>{{user.remainingLeaveDays}}</p>
           </div>
         </div>
@@ -25,16 +25,22 @@
             </div> -->
         <div class="staff-leave">
             <form #leaveForm="ngForm" id="leaveForm" (ngSubmit)="submitLeave()">
-                <h6>Reason for Leave</h6>
+                <strong>Reason For Leave</strong>
                 <textarea name="leaveReason" rows="1" class="form-control" [(ngModel)]="user.leaveReason"></textarea>
-                <h6>Number of days</h6>
+                <strong>Number Of Days</strong>
                 <textarea name="numberOfDays" rows="1" class="form-control" [(ngModel)]="user.numberOfDays"></textarea>
-                <h6>Current outstsanding duties</h6>
+                <strong>Date To Commence Leave</strong>
+                <textarea name="leaveCommencingDate" rows="1" class="form-control" [(ngModel)]="user.leaveCommencingDate"></textarea>
+                <strong>Date To Return</strong>
+                <textarea name="returnDate" rows="1" class="form-control" [(ngModel)]="user.returnDate"></textarea>
+                <strong>Current Outstsanding Duties</strong>
                 <textarea name="currentOutstandingDuties" rows="1" class="form-control" [(ngModel)]="user.currentOutstandingDuties"></textarea>
-                <h6>Outstanding duties status</h6>
+                <strong>Outstanding Duties Status</strong>
                 <textarea name="statusOfCurrentOutstandingDuties" rows="1" class="form-control" [(ngModel)]="user.statusOfCurrentOutstandingDuties"></textarea>
-                <h6>Staff to takeover</h6>
+                <strong>Staff To Takeover</strong>
                 <textarea name="takeOverEmployee" rows="1" class="form-control" [(ngModel)]="user.takeoverEmployee"></textarea>
+                <strong>Takeover Staff Reports To</strong>
+                <textarea name="fillInEmployeeReportsTo" rows="1" class="form-control" [(ngModel)]="user.fillInEmployeeReportsTo"></textarea>
                 <!-- <label for="leaveReason">Reason for leave</label>
                 <input class="form-control" type="text" name="leaveReason" [(ngModel)]="user.leaveReason">
                 <label for="numberOfDays">Number of days</label>
